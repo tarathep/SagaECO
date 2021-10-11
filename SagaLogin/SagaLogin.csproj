@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E080074E-DD0D-4B97-8FF4-03B569BDC544}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SagaLogin</RootNamespace>
+    <AssemblyName>SagaLogin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="GlobalInfo.cs" />
+    <Compile Include="LoginServer.cs" />
+    <Compile Include="Manager\LoginClientManager.cs" />
+    <Compile Include="Manager\MapServer.cs" />
+    <Compile Include="Manager\MapServerManager.cs" />
+    <Compile Include="Network\Client\CharStatus.cs" />
+    <Compile Include="Network\Client\LoginClient.cs" />
+    <Compile Include="Packets\Client\CSMG_CHAR_CREATE.cs" />
+    <Compile Include="Packets\Client\CSMG_CHAR_DELETE.cs" />
+    <Compile Include="Packets\Client\CSMG_CHAR_SELECT.cs" />
+    <Compile Include="Packets\Client\CSMG_CHAR_STATUS.cs" />
+    <Compile Include="Packets\Client\CSMG_CHAT_WHISPER.cs" />
+    <Compile Include="Packets\Client\CSMG_FRIEND_ADD.cs" />
+    <Compile Include="Packets\Client\CSMG_FRIEND_ADD_REPLY.cs" />
+    <Compile Include="Packets\Client\CSMG_FRIEND_DELETE.cs" />
+    <Compile Include="Packets\Client\CSMG_FRIEND_DETAIL_UPDATE.cs" />
+    <Compile Include="Packets\Client\CSMG_FRIEND_MAP_UPDATE.cs" />
+    <Compile Include="Packets\Client\CSMG_LOGIN.cs" />
+    <Compile Include="Packets\Client\CSMG_PING.cs" />
+    <Compile Include="Packets\Client\CSMG_REQUEST_MAP_SERVER.cs" />
+    <Compile Include="Packets\Client\CSMG_RING_EMBLEM.cs" />
+    <Compile Include="Packets\Client\CSMG_RING_EMBLEM_NEW.cs" />
+    <Compile Include="Packets\Client\CSMG_SEND_GUID.cs" />
+    <Compile Include="Packets\Client\CSMG_SEND_VERSION.cs" />
+    <Compile Include="Packets\Client\CSMG_WRP_REQUEST.cs" />
+    <Compile Include="Packets\Map\INTERN_LOGIN_REGISTER.cs" />
+    <Compile Include="Packets\Map\INTERN_LOGIN_REQUEST_CONFIG.cs" />
+    <Compile Include="Packets\Map\INTERN_LOGIN_REQUEST_CONFIG_ANSWER.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_CREATE_ACK.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_DATA.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_DELETE_ACK.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_EQUIP.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_SELECT_ACK.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAR_STATUS.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAT_WHISPER.cs" />
+    <Compile Include="Packets\Server\SSMG_CHAT_WHISPER_FAILED.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_ADD.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_ADD_FAILED.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_ADD_OK.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_CHAR_INFO.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_DELETE.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_DETAIL_UPDATE.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_MAP_UPDATE.cs" />
+    <Compile Include="Packets\Server\SSMG_FRIEND_STATUS_UPDATE.cs" />
+    <Compile Include="Packets\Server\SSMG_LOGIN_ACK.cs" />
+    <Compile Include="Packets\Server\SSMG_LOGIN_ALLOWED.cs" />
+    <Compile Include="Packets\Server\SSMG_PONG.cs" />
+    <Compile Include="Packets\Server\SSMG_RING_EMBLEM.cs" />
+    <Compile Include="Packets\Server\SSMG_SEND_TO_MAP_SERVER.cs" />
+    <Compile Include="Packets\Server\SSMG_VERSION_ACK.cs" />
+    <Compile Include="Packets\Server\SSMG_WRP_LIST.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SagaDB\SagaDB.csproj">
+      <Project>{fa18431e-3313-44ea-a1cb-4a1d3e5304c8}</Project>
+      <Name>SagaDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SagaLib\SagaLib.csproj">
+      <Project>{f82566a2-5d19-47d8-9290-04d8205609b2}</Project>
+      <Name>SagaLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

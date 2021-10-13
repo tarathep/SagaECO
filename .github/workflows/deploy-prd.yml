@@ -10,40 +10,40 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build & Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
+  # build:
+  #   name: Build & Push Docker image to Docker Hub
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Check out the repo
-      uses: actions/checkout@v2
+  #   steps:
+  #   - name: Check out the repo
+  #     uses: actions/checkout@v2
     
-    - uses: nuget/setup-nuget@v1
-      with:
-        nuget-version: 'latest'
+  #   - uses: nuget/setup-nuget@v1
+  #     with:
+  #       nuget-version: 'latest'
     
-    - run: nuget restore SagaECO.sln
+  #   - run: nuget restore SagaECO.sln
 
 
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v1
+  #   - name: Set up QEMU
+  #     uses: docker/setup-qemu-action@v1
     
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
+  #   - name: Set up Docker Buildx
+  #     uses: docker/setup-buildx-action@v1
 
-    - name: Log in to Docker Hub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+  #   - name: Log in to Docker Hub
+  #     uses: docker/login-action@v1
+  #     with:
+  #       username: ${{ secrets.DOCKER_USERNAME }}
+  #       password: ${{ secrets.DOCKER_PASSWORD }}
     
     
-    - name: Build and push
-      run: |
-        docker build -t kietara/sagalogin:latest -f dockerfile-login .
-        docker build -t kietara/sagamap:latest -f dockerfile-map .
-        docker push kietara/sagalogin:latest
-        docker push kietara/sagamap:latest
+  #   - name: Build and push
+  #     run: |
+  #       docker build -t kietara/sagalogin:latest -f dockerfile-login .
+  #       docker build -t kietara/sagamap:latest -f dockerfile-map .
+  #       docker push kietara/sagalogin:latest
+  #       docker push kietara/sagamap:latest
       
 
   deploy:
@@ -64,11 +64,8 @@ jobs:
         password: ${{ secrets.BOKIE_SERVER_PASSWORD }}
         port: ${{ secrets.BOKIE_SERVER_PORT }}
         script: |
-          docker stop sagamap
-          docker stop sagalogin
-          docker rm sagamap
-          docker rm sagalogin
-          docker rmi kietara/sagamap:latest
-          docker rmi kietara/sagalogin:latest
+          docker stop sagamap sagalogin
+          docker rm sagamap sagalogin
+          docker rmi kietara/sagamap:latest kietara/sagalogin:latest
           docker run -d --restart always --name sagalogin -p 12200:12200 -v d:/SagaConfig/Config:/Config -v d:/SagaConfig/Log:/Log kietara/sagalogin:latest
           docker run -d --restart always --name sagamap -p 12201:12201 -v d:/SagaConfig/Config:/Config -v d:/SagaConfig/Log:/Log kietara/sagamap:latest

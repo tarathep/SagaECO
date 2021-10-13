@@ -9,4 +9,4 @@ COPY --from=0 /SagaMap/bin/Debug/ .
 COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
 COPY Configuration/ .
 
-ENTRYPOINT [ "mono", "SagaMap.exe" ]
+ENTRYPOINT [ "read x < /dev/fd/1 | mono --debug SagaMap.exe"]

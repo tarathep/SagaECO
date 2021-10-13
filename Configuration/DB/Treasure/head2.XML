@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreasureDB>
+  <TreasureList GroupName="head2">
+    <Item rate="10" count="1">50102800</Item>
+    <Item rate="10" count="1">50102801</Item>
+    <Item rate="8" count="1">50102802</Item>
+    <Item rate="8" count="1">50102803</Item>
+    <Item rate="8" count="1">50102804</Item>
+    <Item rate="8" count="1">50102805</Item>
+    <Item rate="8" count="1">50039800</Item>
+    <Item rate="10" count="1">50039801</Item>
+    <Item rate="10" count="1">50039809</Item>
+    <Item rate="10" count="1">50039814</Item>
+    <Item rate="10" count="1">50039850</Item>
+  </TreasureList>
+</TreasureDB>

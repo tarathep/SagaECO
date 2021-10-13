@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreasureDB>
+  <TreasureList GroupName="home2">
+    <Item rate="4" count="1">30010051</Item>
+    <Item rate="4" count="1">30010052</Item>
+    <Item rate="4" count="1">30010053</Item>
+    <Item rate="4" count="1">30010054</Item>
+    <Item rate="4" count="1">30010055</Item>
+    <Item rate="4" count="1">30010056</Item>
+    <Item rate="4" count="1">30010057</Item>
+    <Item rate="4" count="1">30010058</Item>
+    <Item rate="4" count="1">30010059</Item>
+    <Item rate="4" count="1">30050100</Item>
+    <Item rate="4" count="1">30050101</Item>
+    <Item rate="4" count="1">30050102</Item>
+    <Item rate="4" count="1">30050103</Item>
+    <Item rate="4" count="1">30050104</Item>
+    <Item rate="5" count="1">30050105</Item>
+    <Item rate="5" count="1">30050106</Item>
+    <Item rate="5" count="1">30050107</Item>
+    <Item rate="5" count="1">30050108</Item>
+    <Item rate="4" count="1">30050110</Item>
+    <Item rate="4" count="1">30050111</Item>
+    <Item rate="4" count="1">30050112</Item>
+    <Item rate="4" count="1">30050113</Item>
+    <Item rate="4" count="1">30050114</Item>
+    <Item rate="4" count="1">30050115</Item>
+  </TreasureList>
+</TreasureDB>

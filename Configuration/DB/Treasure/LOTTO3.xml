@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TreasureDB>
+  <TreasureList GroupName="LOTTO3">
+    <Item rate="5" count="1">50041050</Item>
+    <Item rate="5" count="1">50180352</Item>
+    <Item rate="15" count="1">21010025</Item>
+    <Item rate="35" count="100">29010400</Item>
+    <Item rate="5" count="1">50073900</Item>
+    <Item rate="8" count="1">60105800</Item>
+    <Item rate="1" count="1">50008809</Item>
+    <Item rate="35" count="1">60105400</Item>
+    <Item rate="3" count="1">50001952</Item>
+    <Item rate="35" count="1">50039800</Item>
+    <Item rate="35" count="1">10000101</Item>
+    <Item rate="11" count="1">50103200</Item>
+    <Item rate="1" count="1">10058400</Item>
+    <Item rate="11" count="1">50103205</Item>
+    <Item rate="10" count="1">60110005</Item>
+    <Item rate="10" count="1">60111700</Item>
+    <Item rate="17" count="1">50103100</Item>
+    <Item rate="3" count="1">50074100</Item>
+    <Item rate="7" count="1">10059500</Item>
+    <Item rate="22" count="1">50044200</Item>
+    <Item rate="3" count="1">50042900</Item>
+    <Item rate="5" count="1">29002700</Item>
+  </TreasureList>
+</TreasureDB>

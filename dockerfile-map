@@ -1,0 +1,12 @@
+FROM mono:latest
+
+COPY . .
+RUN msbuild SagaECO.sln
+
+
+FROM mono:latest
+COPY --from=0 /SagaMap/bin/Debug/ .
+COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
+COPY Configuration/ .
+
+ENTRYPOINT [ "mono", "SagaMap.exe" ]

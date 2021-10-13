@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreasureDB>
+  <TreasureList GroupName="home4">
+    <Item rate="50" count="1">30060000</Item>
+    <Item rate="10" count="1">30060100</Item>
+    <Item rate="30" count="1">30060200</Item>
+    <Item rate="5" count="1">30060300</Item>
+    <Item rate="5" count="1">30060400</Item>
+  </TreasureList>
+</TreasureDB>

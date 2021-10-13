@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Spawns>
+  <spawn>
+    <!--ホログラフ-->
+    <id>10970000</id>
+    <map>20164000</map>
+    <x>128</x>
+    <y>128</y>
+    <amount>69</amount>
+    <range>128</range>
+    <delay>10</delay>
+  </spawn>
+  <spawn>
+    <!--宝箱１３-->
+    <id>30270013</id>
+    <map>20164000</map>
+    <x>152</x>
+    <y>73</y>
+    <amount>1</amount>
+    <range>14</range>
+    <delay>1500</delay>
+  </spawn>
+  <spawn>
+    <!--コンテナ６-->
+    <id>30280006</id>
+    <map>20164000</map>
+    <x>152</x>
+    <y>73</y>
+    <amount>1</amount>
+    <range>14</range>
+    <delay>1800</delay>
+  </spawn>
+</Spawns>

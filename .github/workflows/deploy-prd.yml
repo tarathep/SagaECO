@@ -19,8 +19,8 @@ jobs:
       uses: actions/checkout@v2
     
     - uses: nuget/setup-nuget@v1
-    with:
-      nuget-version: 'latest'
+      with:
+        nuget-version: 'latest'
     
     - run: nuget restore SagaECO.sln
 

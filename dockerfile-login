@@ -9,5 +9,6 @@ COPY --from=0 /SagaLogin/bin/Debug/ .
 COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
 COPY Configuration/ .
 COPY login.sh .
+RUN chmod 777 login.sh
 
 ENTRYPOINT [ "./login.sh" ]

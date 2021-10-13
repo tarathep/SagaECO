@@ -9,5 +9,6 @@ COPY --from=0 /SagaMap/bin/Debug/ .
 COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
 COPY Configuration/ .
 COPY map.sh .
+RUN chmod 777 map.sh
 
 ENTRYPOINT [ "./map.sh" ]

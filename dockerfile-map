@@ -8,5 +8,6 @@ FROM mono:latest
 COPY --from=0 /SagaMap/bin/Debug/ .
 COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
 COPY Configuration/ .
+COPY map.sh .
 
-ENTRYPOINT [ "read x < /dev/fd/1 | mono --debug SagaMap.exe"]
+ENTRYPOINT [ "./map.sh" ]

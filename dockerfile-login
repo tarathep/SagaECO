@@ -8,5 +8,6 @@ FROM mono:latest
 COPY --from=0 /SagaLogin/bin/Debug/ .
 COPY --from=0 /SagaScript/bin/Debug/SagaScript.dll ./Scripts/
 COPY Configuration/ .
+COPY login.sh .
 
-ENTRYPOINT [ "read x < /dev/fd/1 | mono --debug SagaLogin.exe"]
+ENTRYPOINT [ "./login.sh" ]

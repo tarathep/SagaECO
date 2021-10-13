@@ -17,6 +17,13 @@ jobs:
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
+    
+    - uses: nuget/setup-nuget@v1
+    with:
+      nuget-version: 'latest'
+    
+    - run: nuget restore SagaECO.sln
+
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1

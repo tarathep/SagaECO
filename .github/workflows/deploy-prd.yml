@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
-      
+
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
     
@@ -33,8 +33,8 @@ jobs:
     
     - name: Build and push
       run: |
-        docker build -t kietara/sagalogin:latest -f dockerfile-login
-        docker build -t kietara/sagamap:latest -f dockerfile-map
+        docker build -t kietara/sagalogin:latest -f dockerfile-login .
+        docker build -t kietara/sagamap:latest -f dockerfile-map .
         docker push kietara/sagalogin:latest
         docker push kietara/sagamap:latest
       

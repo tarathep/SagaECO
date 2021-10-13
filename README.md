@@ -2,6 +2,11 @@
 Emil Chronicle Online Server
 https://econline.org
 
+<img src="Image/welcome.jpg" width="50%" >
+
+# Example
+
+<img src="Image/example_game.jpg">
 
 ## Docker
 
@@ -16,3 +21,4 @@ SagaMap
 ```sh
 docker run -d --restart always --name sagamap -p 12201:12201 -v d:/SagaConfig/Config:/Config -v d:/SagaConfig/Log:/Log kietara/sagamap:latest
 ```
+

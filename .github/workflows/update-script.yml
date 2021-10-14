@@ -28,4 +28,4 @@ jobs:
         port: ${{ secrets.BOKIE_SERVER_PORT }}
         script: |
           cd sagaeco
-          update.sh
+          update.bat

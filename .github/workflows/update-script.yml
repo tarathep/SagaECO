@@ -1,0 +1,31 @@
+name: UPDATE-SCRIPT
+
+on:
+  push:
+    branches:
+      - feature/script
+  pull_request:
+    branches:
+      - feature/script
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Production
+      url: 'https://econline.org'
+    
+    steps:
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.BOKIE_SERVER_HOST }}
+        username: ${{ secrets.BOKIE_SERVER_USERNAME }}
+        password: ${{ secrets.BOKIE_SERVER_PASSWORD }}
+        port: ${{ secrets.BOKIE_SERVER_PORT }}
+        script: |
+          cd sagaeco
+          git pull

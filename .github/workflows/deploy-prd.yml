@@ -64,7 +64,7 @@ jobs:
         password: ${{ secrets.BOKIE_SERVER_PASSWORD }}
         port: ${{ secrets.BOKIE_SERVER_PORT }}
         source: "deploy.bat"
-        target: ""
+        target: "/"
 
     - name: Deploy
       uses: appleboy/ssh-action@master

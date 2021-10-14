@@ -1,5 +1,5 @@
 <ECOShop>
- <Category>
+ <!-- <Category>
   <ID>1</ID>
   <Name>PET</Name>
   <Item>
@@ -81150,5 +81150,5 @@
    <Points>0</Points>
    <Comment>Free</Comment>
   </Item>
- </Category>
+ </Category> -->
 </ECOShop>

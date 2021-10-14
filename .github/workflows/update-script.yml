@@ -28,5 +28,4 @@ jobs:
         port: ${{ secrets.BOKIE_SERVER_PORT }}
         script: |
           cd sagaeco
-          git checkout feature/script
-          git pull
+          update.sh

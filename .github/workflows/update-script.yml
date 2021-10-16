@@ -12,7 +12,7 @@ on:
 jobs:
   script:
     name: Update Script
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     environment:
       name: Production

@@ -37,7 +37,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: SagaScript
-        path: 'D:\\a\\SagaECO\\SagaScript\\bin\\Debug\\SagaScript.dll'
+        path: 'D:\a\SagaECO\SagaECO\SagaScript\bin\Debug\SagaScript.dll'
 
     # - name: copy file via ssh password
     #   uses: appleboy/scp-action@master

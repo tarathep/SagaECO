@@ -16,28 +16,33 @@ jobs:
 
     environment:
       name: Production
-      url: 'https://econline.org'
     
     steps:
-    - name: Checkout Unit Test Files
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
       with:
         ref: feature/script
-      
-    # - uses: nuget/setup-nuget@v1
-    #   with:
-    #     nuget-version: 'latest'
-    
-    # - run: nuget restore SagaECO.sln
 
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
       with:
-        dotnet-version: '2.1'
+        nuget-version: 'latest'
+    
+    - run: nuget restore SagaECO.sln
 
-    - run: dotnet build SagaECO.sln
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.0.3
 
-    - name: Update
+    - run: msbuild.exe SagaECO.sln
+
+  db:
+    name: Update DB
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Production
+    
+    steps:
+    - name: Update DB
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.BOKIE_SERVER_HOST }}

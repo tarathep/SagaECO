@@ -33,6 +33,8 @@ jobs:
 
     - run: msbuild.exe SagaECO.sln
 
+    - run: dir
+
   db:
     name: Update DB
     runs-on: ubuntu-latest

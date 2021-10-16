@@ -19,6 +19,11 @@ jobs:
       url: 'https://econline.org'
     
     steps:
+    - name: Checkout Unit Test Files
+      uses: actions/checkout@v2
+      with:
+        ref: dev
+      
     # - uses: nuget/setup-nuget@v1
     #   with:
     #     nuget-version: 'latest'

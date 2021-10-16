@@ -52,6 +52,8 @@ jobs:
       with:
         name: SagaScript
         path: '${{ github.workspace }}'
+
+    - run: ls
     
     - name: Copy File To Server
       uses: appleboy/scp-action@master

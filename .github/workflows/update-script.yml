@@ -35,6 +35,8 @@ jobs:
 
     - run: dir
 
+    - run: scp
+
   db:
     name: Update DB
     runs-on: ubuntu-latest

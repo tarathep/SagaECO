@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Unit Test Files
       uses: actions/checkout@v2
       with:
-        ref: dev
+        ref: feature/script
       
     # - uses: nuget/setup-nuget@v1
     #   with:

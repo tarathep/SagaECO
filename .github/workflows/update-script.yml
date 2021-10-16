@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Deploy to Production
+  script:
+    name: Update Script
     runs-on: ubuntu-latest
 
     environment:
@@ -19,7 +19,20 @@ jobs:
       url: 'https://econline.org'
     
     steps:
-    - name: Deploy
+    # - uses: nuget/setup-nuget@v1
+    #   with:
+    #     nuget-version: 'latest'
+    
+    # - run: nuget restore SagaECO.sln
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1
+      # with:
+      #   dotnet-version: '2.1.x'
+
+    - run: dotnet build SagaScript
+
+    - name: Update
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.BOKIE_SERVER_HOST }}

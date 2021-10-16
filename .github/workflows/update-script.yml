@@ -30,7 +30,7 @@ jobs:
       # with:
       #   dotnet-version: '2.1.x'
 
-    - run: dotnet build SagaScript
+    - run: dotnet build SagaECO.sln
 
     - name: Update
       uses: appleboy/ssh-action@master

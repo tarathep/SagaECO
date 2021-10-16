@@ -62,8 +62,8 @@ jobs:
         username: ${{ secrets.BOKIE_SERVER_USERNAME }}
         password: ${{ secrets.BOKIE_SERVER_PASSWORD }}
         port: ${{ secrets.BOKIE_SERVER_PORT }}
-        source: '${{ github.workspace }}\SagaScript.dll'
-        target: 'C:\Users\Bokie\scripts\SagaScript.dll'
+        source: '${{ github.workspace }}/SagaScript.dll'
+        target: 'C:/Users/Bokie/scripts/SagaScript.dll'
     
 
 
